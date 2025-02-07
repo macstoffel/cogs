@@ -1,6 +1,11 @@
 {
-  "author": [
-    "Vertyco"
+    "author": ["MacStoffel"],
+    "install_msg": "Bedankt voor het installeren van pixl-dutch!",
+    "name": "pixl-dutch",
+    "short": "Een geweldige cog!",
+    "description": "Deze cog doet toffe dingen!",
+    "tags": ["fun", "dutch"]
+
   ],
   "description": "Raad foto's voordat iemand anders dat doet. Delen ervan worden langzaam onthuld.",
   "disabled": false,
