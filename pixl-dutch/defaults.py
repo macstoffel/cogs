@@ -81,7 +81,7 @@ defaults = [
         "answers": ["bout"]},
     {
         "url": "https://i5.walmartimages.com/asr/cadb77b5-c111-43ea-8d49-920ad49448c1.658ec8185ae011eb9113fcaa3ebdd220.jpeg",
-        "answers": ["noot", "noten"]},
+        "answers": ["bolt", "bolts"]},
     {
         "url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/11/chestnut-nut-nuts-peanuts-pistachio-cashew-1296x728-header-1296x728.jpg",
         "answers": ["noot", "noten"]},
