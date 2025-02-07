@@ -2,11 +2,11 @@
   "author": [
     "Vertyco"
   ],
-  "description": "Guess pictures before anyone else as sections of it are slowly revealed.",
+  "description": "Raad foto's voordat iemand anders dat doet. Delen ervan worden langzaam onthuld.",
   "disabled": false,
-  "end_user_data_statement": "This cog only stores user IDs for its leaderboard.\n\nThis cog can cause rate limiting on larger bots due to it deleting and re-sending updated images frequently.\n\nDOCUMENTATION: https://github.com/vertyco/vrt-cogs/blob/main/pixl/README.md",
+  "end_user_data_statement": "Deze cog slaat alleen gebruikers-ID's op voor zijn klassement.\n\nDeze cog kan snelheidsbeperkingen veroorzaken op grotere bots omdat het regelmatig bijgewerkte afbeeldingen verwijdert en opnieuw verzendt.\n\nDOCUMENTATIE: https://github.com/vertyco/vrt-cogs/blob/main/pixl/README.md",
   "hidden": false,
-  "install_msg": "Thank you for installing!",
+  "install_msg": "Dank voor het installeren!",
   "min_bot_version": "3.4.17",
   "min_python_version": [
     3,
@@ -25,7 +25,7 @@
     "aiocache",
     "tabulate"
   ],
-  "short": "Image guessing game!",
+  "short": "Afbeelding raden spel!",
   "tags": [
     "fun",
     "picture",

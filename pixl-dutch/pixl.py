@@ -138,7 +138,7 @@ class Pixl(commands.Cog):
                 table.append([place, user.name, data["score"], data["wins"], data["games"]])
             board = tabulate(
                 tabular_data=table,
-                headers=["#", "Name", "Score", "Wins", "Games"],
+                headers=["#", "Naam", "Score", "Winst", "Games"],
                 numalign="left",
                 stralign="left",
             )
@@ -163,9 +163,9 @@ class Pixl(commands.Cog):
         cid = ctx.channel.id
         uid = ctx.author.id
         if cid in self.active:
-            return await ctx.send("There is already a Pixl game going on in this channel")
+            return await ctx.send("Er is al een Pixl spel bezig")
         elif uid in self.active:
-            return await ctx.send("You already have a Pixl game going on")
+            return await ctx.send("Je hebt al een Pixl spel gestart")
         self.active.add(cid)
         self.active.add(uid)
         try:
@@ -214,7 +214,7 @@ class Pixl(commands.Cog):
         msg = None
         embed = discord.Embed(
             title="Pixl Guess",
-            description=f"Guess the image before it's fully revealed!\nTime runs out {game.time_left}",
+            description=f"Raad het plaatje voordat het er staat!\nSpel eindigt {game.time_left}",
             color=discord.Color.random(),
         )
         try:
@@ -230,7 +230,7 @@ class Pixl(commands.Cog):
                     await asyncio.sleep(delay)
         except Exception:
             return await ctx.send(
-                f"Something went wrong during the game!\n"
+                f"Er is iets mis gegaan tijdens het spel!\n"
                 f"Image: `{correct[0]} - {url}`\n"
                 f"{box(traceback.format_exc(), 'py')}"
             )
@@ -249,20 +249,20 @@ class Pixl(commands.Cog):
         thumb = None
         if winner:  # Chicken dinner
             thumb = (winner.display_avatar.url) if dpy2 else winner.avatar_url
-            title = "Winner!"
-            desc = f"{winner.name} guessed correctly after {shown} blocks!\n" f"`Points Awarded:  `{points}\n"
+            title = "Winnaar!"
+            desc = f"{winner.name} heeft het geraden na {shown} blokken!\n" f"`Punten gewonnen:  `{points}\n"
             if participants >= min_p and reward:
                 desc += f"`Credits Awarded: `{humanize_number(reward)}"
             color = winner.color
         else:
             title = "Game Over!"
             if points > 0:  # Time ran out
-                desc = "Nobody guessed before time ran out!"
+                desc = "Niemand heeft het geraden toen de tijd om was!"
             else:  # Picture was completed
-                desc = "Nobody guessed before the picture was finished!"
+                desc = "Niemand heeft het geraden toen de tijd om was!"
             color = discord.Color.red()
         if conf["show_answer"]:
-            desc += f"\nCorrect answer: ||{correct[0]}||"
+            desc += f"\nCorrecte antwoord: ||{correct[0]}||"
         embed = discord.Embed(
             title=title,
             description=desc,
@@ -270,9 +270,9 @@ class Pixl(commands.Cog):
         )
         embed.set_image(url=att)
         if participants == 1:
-            embed.set_footer(text="There was 1 participant")
+            embed.set_footer(text="Er was 1 speler")
         else:
-            embed.set_footer(text=f"There were {participants} participants")
+            embed.set_footer(text=f"Er waren {participants} spelers")
         if thumb:
             embed.set_thumbnail(url=thumb)
 

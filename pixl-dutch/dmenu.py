@@ -35,8 +35,8 @@ async def confirm(ctx: commands.Context, msg: discord.Message) -> Union[bool, No
     """
     action_row = [
         ActionRow(
-            Button(style=ButtonStyle.grey, label="Yes"),
-            Button(style=ButtonStyle.grey, label="No"),
+            Button(style=ButtonStyle.grey, label="Ja"),
+            Button(style=ButtonStyle.grey, label="Nee"),
         )
     ]
     try:
@@ -48,7 +48,7 @@ async def confirm(ctx: commands.Context, msg: discord.Message) -> Union[bool, No
         if interaction.author != ctx.author:
             asyncio.create_task(
                 interaction.reply(
-                    "You are not the author of this command", ephemeral=True
+                    "U bent niet de auteur van dit commando", ephemeral=True
                 )
             )
         return interaction.author == ctx.author
@@ -66,7 +66,7 @@ async def confirm(ctx: commands.Context, msg: discord.Message) -> Union[bool, No
         await msg.edit(components=[])
     except discord.NotFound:
         pass
-    if inter.clicked_button.label == "Yes":
+    if inter.clicked_button.label == "Ja":
         value = True
     else:
         value = False
@@ -156,7 +156,7 @@ class MenuView:
             if interaction.author != self.ctx.author:
                 asyncio.create_task(
                     interaction.reply(
-                        "You are not the author of this command", ephemeral=True
+                        "U bent niet de auteur van dit commando", ephemeral=True
                     )
                 )
             return interaction.author == self.ctx.author
@@ -226,19 +226,19 @@ async def menu(
         If either of the notes above are violated
     """
     if len(pages) < 1:
-        raise RuntimeError("Must provide at least 1 page.")
+        raise RuntimeError("Moet minimaal 1 pagina bevatten.")
     if not isinstance(pages[0], (discord.Embed, str)):
-        raise RuntimeError("Pages must be of type discord.Embed or str")
+        raise RuntimeError("Pagina moet van het type Discord zijn. Embed of str")
     if not all(isinstance(x, discord.Embed) for x in pages) and not all(
         isinstance(x, str) for x in pages
     ):
-        raise RuntimeError("All pages must be of the same type")
+        raise RuntimeError("Alle pagina's moeten van hetzelfde type zijn")
     for key, value in controls.items():
         maybe_coro = value
         if isinstance(value, functools.partial):
             maybe_coro = value.func
         if not asyncio.iscoroutinefunction(maybe_coro):
-            raise RuntimeError("Function must be a coroutine")
+            raise RuntimeError("Functie moet een coroutine zijn")
     if len(pages) <= 10:
         controls = controls.copy()
         if "\N{BLACK LEFT-POINTING DOUBLE TRIANGLE}" in controls:
