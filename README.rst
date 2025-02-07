@@ -18,19 +18,19 @@ Next, let's add my repository to your system.
 
 .. code-block:: ini
 
-    [p]repo add AAA3A-cogs https://github.com/AAA3A-AAA3A/AAA3A-cogs
+    [p]repo add MacStoffel-cogs https://github.com/macstoffel/cogs/tree/main
 
 To install a cog, use this command, replacing <cog> with the name of the cog you wish to install:
 
 .. code-block:: ini
 
-    [p]cog install AAA3A-cogs <cog>
+    [p]cog install MacStoffel-cogs <cog>
 
 -------------------
 Available cogs list
 -------------------
 
-This list of cogs is not up to date. At the time of writing there are 22. You can look at the folder names on this repo or see a more complete description on Red's Index or in the README for each cog.
+This list of cogs is not up to date. At the time of writing there are 67. You can look at the folder names on this repo or see a more complete description on Red's Index or in the README for each cog.
 
 **SimpleSanction:**
 
@@ -82,15 +82,15 @@ If you have ideas, you can open a problem. If you have coded new features, make 
 Translate my cogs
 -----------------
 
-The associated crowdin project is available at this address: https://crowdin.com/project/aaa3a-cogs
+The associated crowdin project is available at this address: https://crowdin.com/project/aaa3a-cogs (<-the original I forked from)
 
 If you would like to see languages added to this project, please let me know.
 
--------
-Support
--------
+-------------------
+Support from AAA3A
+-------------------
 
-Check out my docs `here <https://aaa3a-cogs.readthedocs.io/en/latest/>`_.
+Check out the original docs `here <https://aaa3a-cogs.readthedocs.io/en/latest/>`_.
 Mention me in the #support_aaa3a-cogs channel in the `cogs support server <https://discord.gg/red-cog-support-240154543684321280>`_ if you need any help.
 Please ping me or contact me in DM.
 Additionally, feel free to open an issue or pull request to this repo.
