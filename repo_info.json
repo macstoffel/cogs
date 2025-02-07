@@ -1,0 +1,7 @@
+{
+    "name": "MacStoffel Cogs",
+    "author": ["MacStoffel"],
+    "description": "Een verzameling cogs voor mijn bot.",
+    "install_msg": "Bedankt voor het toevoegen van mijn repo!",
+    "cogs": {}
+}
