@@ -1,7 +1,7 @@
 {
     "author" : ["AAA3A"],
     "install_msg" : "Thank you for installing my repo! If you need support, ping me in the Cog Support server or create an issue on GitHub.",
-    "name" : "AAA3A-cogs",
+    "name" : "MacStoffel-cogs",
     "short" : "Many cogs for Red-DiscordBot!",
     "description" : "Many cogs for Red-DiscordBot!",
     "tags" : ["utility", "functionalities"]
